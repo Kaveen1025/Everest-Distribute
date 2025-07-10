@@ -9,12 +9,20 @@ const DrawerNavigation = () => {
   return (
     <Drawer.Navigator
       initialRouteName="Home"
+      
+          screenOptions={{
+           
+        drawerStyle: {
+          width: '75%', // 👈 this makes it open half the screen width
+        },
+      }}
       drawerContent={props => <CustomDraverContent {...props} />}>
       <Drawer.Screen
         key="home"
         name="Home"
         component={Home}
         options={{headerShown: false, swipeEnabled: false, unmountOnBlur: true}}
+       
       />    
     </Drawer.Navigator>
   );

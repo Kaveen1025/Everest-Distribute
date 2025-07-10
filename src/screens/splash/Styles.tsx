@@ -9,7 +9,7 @@ import {
 const splashStyles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 10,
+    
     backgroundColor: MainStyles.COLORS.WHITE,
   },
 

@@ -14,10 +14,11 @@ import {
   Platform,
   Keyboard,
   StatusBar,
+  ImageBackground,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import loginStyles from './Styles';
-import {useNavigation} from '@react-navigation/native';
+import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {Root_URL} from '../../constant/APIURL';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {endLoading, startLoading} from '../../redux/action/SpinnerAction';
@@ -56,12 +57,22 @@ const Login = () => {
   
         navigation.navigate('DrowerNavigation' as never);
   };
+
+
+
+
   return (
     <SafeAreaView style={loginStyles.container}>
+       
+  <ImageBackground
+    source={require('../../assets/images/bgp.png')} // ← your image path
+    style={{ flex: 1 }}
+    resizeMode="cover"
+  >
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
         style={{flex: 1}}>
-        <ScrollView>
+        
           <View style={loginStyles.logoView}>
             <View>
               <View style={loginStyles.logoCircle}>
@@ -69,14 +80,15 @@ const Login = () => {
                   source={require('../../assets/images/Ehpl.png')}
                   style={loginStyles.image}></Image>
               </View>
-              <Text style={loginStyles.welcomeTxt}>Welcome Back!</Text>
+              <Text style={loginStyles.welcomeTxt}></Text>
               <Text style={loginStyles.welcomeTxt2}></Text>
             </View>
           </View>
 
-          <View style={loginStyles.welcomeView}>
-            <Text style={loginStyles.loginTxt}>Login to your account</Text>
-
+          <View >
+            <Text style={loginStyles.loginTxt1}>Hello!</Text>
+            <Text style={loginStyles.loginTxt}>Sign In</Text>
+<ScrollView>
             <View style={loginStyles.inputStyle}>
               <View style={loginStyles.sectionStyle}>
                 <Image
@@ -170,10 +182,12 @@ const Login = () => {
               <Text style={loginStyles.signup}>Sign Up</Text>
             </Text>
           </TouchableOpacity> */}
+            </ScrollView>
           </View>
-        </ScrollView>
+      
       </KeyboardAvoidingView>
-      <View style={loginStyles.abstractBottom} />
+      {/* <View style={loginStyles.abstractBottom} /> */}
+      </ImageBackground>
     </SafeAreaView>
   );
 };

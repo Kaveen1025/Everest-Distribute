@@ -1,6 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
 import React, {useEffect, useRef} from 'react';
-import {View, Text, Image, Animated, LogBox} from 'react-native';
+import {View, Text, Image, Animated, LogBox, ImageBackground} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import splashStyles from './Styles';
 import {useDispatch} from 'react-redux';
@@ -42,6 +42,11 @@ const Splash = () => {
 
   return (
     <Animated.View style={[splashStyles.container, {opacity: moveOpacityVal}]}>
+       <ImageBackground
+          source={require('../../assets/images/bgs.png')} // ← your image path
+          style={{ flex: 1 }}
+          resizeMode="cover"
+        >
       <View style={splashStyles.logoView}>
         <Image
           source={require('../../assets/images/Ehpl.png')}
@@ -56,6 +61,7 @@ const Splash = () => {
           style={splashStyles.logo}
         />
       </View>
+      </ImageBackground>
     </Animated.View>
   );
 };

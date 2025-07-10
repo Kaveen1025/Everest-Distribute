@@ -14,18 +14,17 @@ const loginStyles = StyleSheet.create({
 
   logoView: {
     flex: 1,
-    backgroundColor: MainStyles.COLORS.CHILI_PAPER,
+    // backgroundColor: MainStyles.COLORS.CHILI_PAPER,
   },
 
   logoCircle: {
-    marginTop: 60,
-    backgroundColor: MainStyles.COLORS.CHILI_PAPER,
+    marginTop: 70,
+    // backgroundColor: MainStyles.COLORS.CHILI_PAPER,
   },
 
   image: {
     width: 180,
     height: 180,
-    borderWidth: 1,
     backgroundColor: MainStyles.COLORS.WHITE,
     borderRadius: 100,
     marginBottom: 20,
@@ -40,7 +39,6 @@ const loginStyles = StyleSheet.create({
     padding: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: -34,
     backgroundColor: MainStyles.COLORS.WHITE,
     borderTopLeftRadius: 42,
   },
@@ -63,11 +61,24 @@ const loginStyles = StyleSheet.create({
     alignSelf: 'center',
   },
 
-  loginTxt: {
+  loginTxt1: {
     fontSize: moderateScale(25),
     fontWeight: 'bold',
+    color: MainStyles.COLORS.BLACK,
+    textAlign:'right',
+    width: '90%',
+   
+  
+  },
+
+  loginTxt: {
+    fontSize: moderateScale(40),
+    fontWeight: 'bold',
     color: MainStyles.COLORS.CHILI_PAPER,
-    marginTop: verticalScale(10),
+    textAlign:'right',
+    width: '90%',
+    
+    
   },
 
   inputStyle: {
@@ -95,7 +106,7 @@ const loginStyles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     height: 50,
-    fontSize: 12,
+    fontSize: 13,
     color: MainStyles.COLORS.BLACK,
   },
 
@@ -131,7 +142,7 @@ const loginStyles = StyleSheet.create({
   button: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 9,
+    paddingVertical: 12,
     paddingHorizontal: 32,
     borderRadius: 10,
     elevation: 3,
@@ -139,7 +150,7 @@ const loginStyles = StyleSheet.create({
     backgroundColor: MainStyles.COLORS.CHILI_PAPER,
   },
   text: {
-    fontSize: moderateScale(14),
+    fontSize: 18,
     fontWeight: 'bold',
     letterSpacing: 0.25,
     color: MainStyles.COLORS.WHITE,

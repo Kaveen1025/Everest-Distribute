@@ -10,6 +10,7 @@ const drawerStyles = StyleSheet.create({
   view1: {
     flex: 1,
     marginBottom: 15,
+  
   },
 
   view2: {
@@ -70,12 +71,14 @@ const drawerStyles = StyleSheet.create({
 
   drawerItem: {
     paddingLeft: 0,
+   
     marginBottom: 3,
   },
 
   drawerSection: {
     marginTop: 10,
     marginBottom: 20,
+    
     backgroundColor: MainStyles.COLORS.WHITE,
   },
 

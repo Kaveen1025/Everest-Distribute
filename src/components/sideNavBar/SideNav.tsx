@@ -79,7 +79,7 @@ const CustomDraverContent = () => {
                 <Title style={drawerStyles.title}>
                   {' '}
                   <Title style={drawerStyles.title}>
-                    {userName ? userName : 'EHPL ORDER NOW'}
+                    {userName ? userName : 'EHPL Distribute'}
                   </Title>
                 </Title>
               </View>
